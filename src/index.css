@@ -1,0 +1,111 @@
+:root {
+  --neon-green: #B4F281; 
+  --bg-white: #F5F5F5;
+  --text-black: #000000;
+
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1200px; /* Ancho amplio para ver las columnas */
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+}
+
+/* Configuración de Columnas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+  gap: 24px; 
+}
+
+
+.glass-card {
+  background-color: #FFFFFF;
+  border-radius: 32px; 
+  border: var(--border-thin); 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: var(--border-thin);
+  margin-bottom: 20px;
+}
+
+.badge.activo { background-color: var(--neon-green); }
+.badge.mantenimiento { background-color: #FFD93D; }
+.badge.pendiente { background-color: #FFFFFF; }
+
+h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  line-height: 1.1;
+}
+
+.location {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+
+.link-btn {
+  background-color: var(--text-black);
+  color: var(--neon-green);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-btn:hover {
+  background-color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stat-box {
+  background-color: var(--neon-green);
+  padding: 20px;
+  border-radius: 24px;
+  border: var(--border-thin);
+}
